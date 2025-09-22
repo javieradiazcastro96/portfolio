@@ -1,9 +1,13 @@
-# Archivos de video grandes
+# Archivos de video grandes (excepto los del portafolio)
 *.mov
-*.mp4
 *.avi
 *.mkv
 *.wmv
+
+# Videos del portafolio (permitidos)
+!assets/videos/*.mp4
+!assets/images/islas/PORTADA.mp4
+!ATDB/corte\ atdb.mov.mp4
 
 # Archivos de sistema
 .DS_Store
