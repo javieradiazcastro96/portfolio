@@ -1,0 +1,145 @@
+/* Estilos específicos para la página de contacto */
+.contact-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.contact-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-text-large);
+}
+
+.contact-intro {
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 48px;
+    max-width: 600px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 64px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    margin-bottom: 32px;
+}
+
+.info-item h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text-medium);
+}
+
+.info-item p {
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-links a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateX(5px);
+    color: var(--color-hover);
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-hover);
+}
+
+.submit-btn {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Animaciones */
+.contact-section h1,
+.contact-intro,
+.contact-info,
+.contact-form {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.contact-intro { animation-delay: 0.1s; }
+.contact-info { animation-delay: 0.2s; }
+.contact-form { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .contact-section h1 {
+        font-size: 40px;
+    }
+}
